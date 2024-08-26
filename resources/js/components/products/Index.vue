@@ -1,8 +1,20 @@
+<script setup>
+import { useRouter } from "vue-router"
+
+const router = useRouter()
+
+const newProduct = () => {
+    router.push('/products/create')
+}
+
+</script>
+
+
 <template>
     <section>
         <div class="titlebar">
             <h1>Products</h1>
-            <button>Add Product</button>
+            <button @click="newProduct">Add Product</button>
         </div>
         <div class="table">
             <div class="table-filter">
